@@ -30,7 +30,7 @@ public class TitleofPage {
 		}
 	
 	@Test
-	public void googleLogoTest() {
+	public void googleLogoTest1() {
 		boolean b = driver.findElement(By.className("K1zIA rS4se")).isDisplayed();
 	}
 	
