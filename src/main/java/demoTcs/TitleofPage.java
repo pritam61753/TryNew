@@ -25,8 +25,8 @@ public class TitleofPage {
 	@Test	
 	public void googleTitleTest() {
 		
-		String title = driver.getTitle();
-		System.out.println(title);	
+		String title1 = driver.getTitle();
+		System.out.println(title1);	
 		}
 	
 	@Test
