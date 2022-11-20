@@ -1,5 +1,6 @@
 package demoTcs;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -14,10 +15,16 @@ public class TitleofPage {
 	
 	@BeforeMethod	
 	public void setUp() {
-		System.setProperty("Webdriver.chrome.driver", "C:\\Users\\win8\\Downloads\\chromedriver_win32 (1).chromedriver.exe");
+//		System.setProperty("Webdriver.chrome.driver", "C:\\Users\\win8\\Downloads\\chromedriver_win32 (1).chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\win8\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		
+		//dynamic wait
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
 		driver.get("https://www.google.com/");
 		
 	}
